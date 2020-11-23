@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = #51221#49888#52264#47140' '#53440#51060#47672
+  Caption = #44396#44544' '#53440#51060#47672' v2'
   ClientHeight = 150
   ClientWidth = 615
   Color = clBtnFace
@@ -98,9 +98,9 @@ object Form1: TForm1
       00000049454E44AE426082}
     Stretch = True
   end
-  object L_couterTime: TLabel
-    Left = 108
-    Top = 113
+  object L_couterTime2: TLabel
+    Left = 252
+    Top = 29
     Width = 110
     Height = 23
     Caption = '01 : 00 : 00'
@@ -119,6 +119,19 @@ object Form1: TForm1
     Color = clRed
     ParentBackground = False
     TabOrder = 0
+    object L_couterTime: TLabel
+      Left = 245
+      Top = 22
+      Width = 110
+      Height = 23
+      Caption = '01 : 00 : 00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
   end
   object chkAllWayTop: TCheckBox
     Left = 7
@@ -132,12 +145,12 @@ object Form1: TForm1
     OnClick = chkAllWayTopClick
   end
   object btn1Hour: TButton
-    Left = 288
+    Left = 480
     Top = 108
-    Width = 319
+    Width = 127
     Height = 37
     Anchors = [akTop]
-    Caption = '1'#49884#44036' '#46041#50504' '#54868#51060#54021'!!!'
+    Caption = '1'#49884#44036
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -15
@@ -147,10 +160,90 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = btn1HourClick
   end
+  object btn50M: TButton
+    Left = 400
+    Top = 108
+    Width = 74
+    Height = 37
+    Anchors = [akTop]
+    Caption = '50'#48516
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    OnClick = btn50MClick
+  end
+  object btn30M: TButton
+    Left = 320
+    Top = 108
+    Width = 74
+    Height = 37
+    Anchors = [akTop]
+    Caption = '30'#48516
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btn30MClick
+  end
+  object btn25M: TButton
+    Left = 160
+    Top = 108
+    Width = 74
+    Height = 37
+    Anchors = [akTop]
+    Caption = '25'#48516
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = btn25MClick
+  end
+  object btn10M: TButton
+    Left = 240
+    Top = 108
+    Width = 74
+    Height = 37
+    Anchors = [akTop]
+    Caption = '10'#48516
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = btn10MClick
+  end
+  object btn5M: TButton
+    Left = 80
+    Top = 108
+    Width = 74
+    Height = 37
+    Anchors = [akTop]
+    Caption = '5'#48516
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btn5MClick
+  end
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    Left = 456
+    Left = 512
     Top = 24
   end
 end
