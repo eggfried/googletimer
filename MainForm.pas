@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, System.Actions, Vcl.ActnList, Vcl.Menus;
 
 type
   TForm1 = class(TForm)
@@ -21,8 +21,12 @@ type
     btn25M: TButton;
     btn10M: TButton;
     btn5M: TButton;
+    TrayIcon1: TTrayIcon;
+    PopupMenu1: TPopupMenu;
+    ActionList1: TActionList;
+    actClose: TAction;
+    N3: TMenuItem;
     procedure chkAllWayTopClick(Sender: TObject);
-
     procedure btn1HourClick(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure btn50MClick(Sender: TObject);
@@ -30,6 +34,8 @@ type
     procedure btn10MClick(Sender: TObject);
     procedure btn25MClick(Sender: TObject);
     procedure btn5MClick(Sender: TObject);
+    procedure actCloseExecute(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
 
   private
     { Private declarations }
@@ -50,6 +56,12 @@ var
 
 
 
+
+
+procedure TForm1.actCloseExecute(Sender: TObject);
+begin
+  close;
+end;
 
 
 procedure TForm1.btn10MClick(Sender: TObject);
@@ -124,12 +136,20 @@ begin
   Timer1.Enabled := True;
 end;
 
+
 procedure TForm1.chkAllWayTopClick(Sender: TObject);
 begin
   if chkAllWayTop.Checked then
     FormStyle := fsStayOnTop
   else
     formstyle := fsNormal;
+end;
+
+
+procedure TForm1.FormPaint(Sender: TObject);
+begin
+  ShowWindow(Application.Handle, SW_HIDE);
+  SetWindowLong(Application.Handle, GWL_EXSTYLE, GetWindowLong(Application.Handle, GWL_EXSTYLE) or WS_EX_TOOLWINDOW);
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
