@@ -5575,7 +5575,7 @@ object Form1: TForm1
     end
   end
   object ActionList1: TActionList
-    Left = 160
+    Left = 192
     Top = 24
     object actClose: TAction
       Caption = #51333#47308
